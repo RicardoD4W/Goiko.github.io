@@ -1,5 +1,5 @@
 # Goiko.github.io
 
 Psrticion del tarbajo
-  Ricardo -->
-   Asier -->
+  Ricardo -->cuerpo
+   Asier -->cabecera
