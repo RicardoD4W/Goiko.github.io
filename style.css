@@ -1,0 +1,31 @@
+#principal{
+float: left;
+
+    background-color: #ECECED;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 3em;
+}
+
+#principal a{
+    font-size: 15pt;
+    text-decoration: none;
+    color: black;
+    height: 40%;
+}
+#principal .alinear a:hover{
+    background-color:#d1d1d8;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#principal .alinear{
+    display: flex;
+    justify-content: space-between;
+    margin-left:  20%;
+    margin-right: 20%;
+    margin-top: 0.5% ;
+}
+
+
+
