@@ -178,9 +178,14 @@ article .menu-goiko{
 
 
 .conten button{ /*boton mas responsive del mundo*/
-
+    align-items: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
     display: inline-block;
     margin: auto;
     text-decoration: none;
+    border-radius: 5px;
 
 }
+
