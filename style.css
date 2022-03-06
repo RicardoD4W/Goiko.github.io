@@ -217,12 +217,13 @@ article .menu-goiko{
 }
 .fotos .img{
     position: relative;
-    width: auto;
+    width: 100%;
 }
 
 .fotos .img:nth-child(4n+1){
     width: 55%;
     padding-right: 8px;
+    padding-bottom: 8px;
 }
 .fotos .img:nth-child(4n+2){
     width: 45%;
@@ -230,6 +231,7 @@ article .menu-goiko{
 .fotos .img:nth-child(4n+3) {
     width: 45%;
     padding-right: 8px;
+    padding-bottom: 8px;
 }
 .fotos .img:nth-child(4n+4){
     width: 55%;
