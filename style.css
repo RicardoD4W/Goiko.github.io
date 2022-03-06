@@ -79,6 +79,7 @@ article .menu-goiko{
     padding: 45px 22px 70px;
     position: relative;
     text-align: center;
+    margin-bottom: 75px;
 }
 
 .menu-goiko .conten h2{
@@ -186,6 +187,61 @@ article .menu-goiko{
     margin: auto;
     text-decoration: none;
     border-radius: 5px;
-
+    
 }
 
+
+
+
+
+/*conoce nuestra carta*/
+.conoce-carta{
+    text-align: center;
+}
+.conoce-carta h2{
+    margin: 15px auto 20px auto;
+    line-height: 1.14;
+    letter-spacing: -0.56px;
+
+    font-family: 'Knockout', serif;
+    font-size: 40PX;
+}
+
+
+.fotos{
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+.fotos .img{
+    position: relative;
+    width: auto;
+}
+
+.fotos .img:nth-child(4n+1){
+    width: 55%;
+    padding-right: 8px;
+}
+.fotos .img:nth-child(4n+2){
+    width: 45%;
+}
+.fotos .img:nth-child(4n+3) {
+    width: 45%;
+    padding-right: 8px;
+}
+.fotos .img:nth-child(4n+4){
+    width: 55%;
+}
+
+.fotos .img .imgCaption {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px 10px;
+}
