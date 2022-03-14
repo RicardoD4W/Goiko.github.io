@@ -1,5 +1,6 @@
 # Goiko.github.io
 
-Psrticion del tarbajo
-  Ricardo -->cuerpo
-   Asier -->cabecera
+Partición del tarbajo:
+
+  Asier --> Cabecera 
+  Ricardo --> Cuerpo
