@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Knockout;
+    src: url(Knockout\ HTF73-FullHeviweight\ Regular.otf);
+}
+
+
+
 #principal{
 float: left;
 
@@ -8,16 +15,14 @@ float: left;
 }
 
 #principal a{
-    font-size: 15pt;
+    font-size: 18px;
+    font-family: 'Nunito Sans', sans-serif;
+
     text-decoration: none;
     color: black;
     height: 40%;
 }
-#principal .alinear a:hover{
-    background-color:#d1d1d8;
-    height: 100%;
-    border-radius: 50%;
-}
+
 
 #principal .noEnrrollar{
     flex-wrap: nowrap;
@@ -29,6 +34,7 @@ float: left;
     margin-left:  20%;
     margin-right: 20%;
     margin-top: 0.5% ;
+
 }
 
 
@@ -57,6 +63,7 @@ article .info{
     height: 50%;
 
     margin-top: 36.5%;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 
@@ -66,113 +73,178 @@ article .menu-goiko{
     float: left;
 
     width: 100%;
-    height: 750px;
-    background-color: #E9E8EB;
+    height: 50%;
+    background: url(//www.goiko.com/wp-content/themes/goiko2020/img/fondo-textura.jpg) repeat;
+    background-size: cover;
+    padding: 45px 22px 70px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 75px;
 }
 
-.menu-goiko .conten{
+.menu-goiko .conten h2{
     float: left;
     clear: both;
 
-    width: 90%;
+    width: 100%;
     height: 80%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
+    margin-left:    0%;
+    margin-right:   0%;
+    margin-top:     0%;
 
-    font-family: 'Poppins', sans-serif;
-    font-size: large;
+    font-family: 'Knockout';
+    font-size: 22px;
+    
 }
 
-.conten .area1 {
-    float: left;
-
-
-  width: 49%;
-  height: 300px;
-  
-  display: grid;
-  grid-template-rows: 50px 3fr 30px;
-  grid-template-columns: 100px 1fr;
+.menu-goiko .conten p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
 }
 
-.area1 header{
-    grid-column: 1/6;
-    grid-row: 1/1;
-    background-color: #ee2737;
-    color: white;
+.conteinerbox{ /*contiene*/
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+
+    position: relative;
+    padding-bottom: 20px;
+    opacity: 1;
+
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.conten .area1 { /*grid area*/
+    width: 48%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "title title"
+        "main side";
+    padding-bottom: 0;
+}
+
+.area1 header{ /*title*/
+
+    line-height: 1.3;
+    grid-area: title;
+
+    background-color: #EE2737;
+    color: #FFF;
+
+    font-size: 22px;
+    padding: 10px;
+    letter-spacing: -0.48px;
+
+    font-family: 'Knockout', serif;
+    text-transform: uppercase;
+    clear: both;
+    overflow-wrap: break-word;
+    display: block;
     font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
     }
+
+    .area1 + .area1 header{ /*title*/
+        background-color: black;
+        }
 
 .area1 aside{
-    font-size: 80%;
-
-    width: 70%;
-    grid-column: 1/3;
-    grid-row: 2/6;
-    background-color: white;
+    padding: 30px;
+    grid-area: main;
+    background-color: #FFF;
 
 }
-.area1 article{
-    margin-left: 66%;
-    width: 34%;
-    grid-column: 2/6;
-    grid-row: 2/6;
+.area1 article img{
+    grid-area: side;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
 }
 
 
 
-.conten .area2 {
-    float: right;
-    display: grid;
 
 
-  width: 49%;
-  height: 300px;
-  
-  grid-template-rows: 50px 1fr 30px;
-  grid-template-columns: 150px 1fr;
-}
-
-.area2 header{
-    grid-column: 1/6;
-    grid-row: 1/1;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    }
-
-.area2 aside{
-    font-size: 80%;
-
-    width: 70%;
-    grid-column: 1/3;
-    grid-row: 2/6;
-    background-color: white;
-
-}
-.area2 aside p, .area2 aside h2{
-    margin-top: 5%;
-    margin-left: 5%;
-}
-.area1 aside p, .area1 aside h2{
-    margin-top: 5%;
-    margin-left: 5%;
-}
-
-.area2 article{
-    margin-left: 63.8%;
-    width: 34%;
-    grid-column: 2/6;
-    grid-row: 2/6;
-}
 
 
-.conten button{
-    float: left;
-    margin-top: 5%;
-    margin-left: 47%;
-    width: 6.5%;
-    height: 5.5%;
+.conten button{ /*boton mas responsive del mundo*/
+    align-items: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    margin: auto;
+    text-decoration: none;
+    border-radius: 5px;
     
+}
+
+
+
+
+
+/*conoce nuestra carta*/
+.conoce-carta{
+    text-align: center;
+}
+.conoce-carta h2{
+    margin: 15px auto 20px auto;
+    line-height: 1.14;
+    letter-spacing: -0.56px;
+
+    font-family: 'Knockout', serif;
+    font-size: 40PX;
+}
+
+
+.fotos{
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+.fotos .img{
+    position: relative;
+    width: 100%;
+}
+
+.fotos .img:nth-child(4n+1){
+    width: 55%;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+.fotos .img:nth-child(4n+2){
+    width: 45%;
+}
+.fotos .img:nth-child(4n+3) {
+    width: 45%;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+.fotos .img:nth-child(4n+4){
+    width: 55%;
+}
+
+.fotos .img .imgCaption {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px 10px;
 }
