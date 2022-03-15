@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Knockout;
+    src: url(fonts\Knockout\HTF73-FullHeviweight\Regular.otf);
+}
+
 /* PRIMER NAV */
 
 nav#menu-principal {
@@ -11,18 +16,28 @@ nav#menu-principal {
     font-weight: bolder;
     line-height: 1;
     font-size: 26px;
-    font-family: "Knockout", serif;
+    font-family: 'Knockout HTF73-FullHeviweight', serif;
 }
 
-a:link, a:visited {
+nav#menu-principal a:link, a:visited {
     color: #000;
     transition: 0.3s;
-    text-decoration:none;
+    text-decoration: none;
 }
 
-a:hover {
+nav#menu-principal a:hover {
     color: red;
 }
+
+/*nav#menu-principal ul li .color-reservar a:link, a:visited {
+    color: #FFF;
+    background-color: #EE2737;
+    text-decoration: none;
+}
+
+nav#menu-principal ul li .color-reservar a:hover {
+    background-color: #000;
+}*/
 
 .menu-principal-listas {
     display: flex;
@@ -102,6 +117,7 @@ div#barra-reserva {
     height: 2.3em;
     margin-right: 5px;
     margin-left: 14px;
+    border-radius: 6px;
 }
 
 .input-fecha {
@@ -109,6 +125,7 @@ div#barra-reserva {
     height: 2.8em;
     margin-right: 5px;
     margin-left: 5px;
+    border-radius: 6px;
 }
 
 .select-hora {
@@ -116,6 +133,7 @@ div#barra-reserva {
     height: 3.1em;
     margin-right: 5px;
     margin-left: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -124,6 +142,7 @@ div#barra-reserva {
     height: 3.1em;
     margin-right: 20px;
     margin-left: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -152,18 +171,20 @@ h2 {
 
 nav#menu-info {
     display: block;
+    width: 100%;
     background-color: #ececed;
+}
+
+nav#menu-info a:link, a:visited {
+    color: #000;
+    text-decoration: none;
 }
 
 nav#menu-info li {
     padding: 0px 20px;
     color: #000;
     font-size: 18px;
+    font-family: 'Nunito Sans', Arial, sans-serif;
     text-align: center;
     letter-spacing: 0.2px;
-}
-
-@font-face {
-    font-family: Knockout;
-    src: url("C:\Users\Quorr\Documents\GitHub\Goiko.github.io\fonts\knockout.ttf") format("opentype");
 }

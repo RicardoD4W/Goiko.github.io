@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="style.css">
     <title>PROYECTO GOIKO (Asier)</title>
 </head>
@@ -12,7 +15,7 @@
 
 <div id="todo">
 
-    <nav id="menu-principal"> <!--barra de navegacion-->
+    <nav id="menu-principal"> <!-- Barra de navegación -->
 
         <ul class="menu-principal-listas">
 
@@ -29,7 +32,7 @@
             </li>
 
             <li class="menu-reservar">
-                <a href="https://www.goiko.com/reservas/">RESERVAR</a>
+                <a class="color-reservar" href="https://www.goiko.com/reservas/">RESERVAR</a>
             </li>
 
             <li class="menu-hacer-pedido">
@@ -50,7 +53,7 @@
 
             <h2 class="reserva-ahora">¡Reserva ahora!</h2>
             
-            <div class="direccion"> <!--formulario-->
+            <div class="direccion"> <!-- Formulario -->
                 <input type="text" name="direccion" placeholder="Dirección" class="input-direccion">
             </div>
 
@@ -59,7 +62,8 @@
             </div>
 
             <div class="hora">
-                <select name="hora" id="num-hora" placeholder="Hora" class="select-hora">
+                <select name="horario" id="num-horario" class="select-hora">
+                    <option hidden selected>Hora</option>
                     <option value="12:00">12:00</option>
                     <option value="12:30">12:30</option>
                     <option value="13:00">13:00</option>
@@ -88,7 +92,8 @@
             </div>
 
             <div class="personas">
-                <select name="personas" id="num-personas" placeholder="Personas" class="select-personas">
+                <select name="personas" id="num-personas" class="select-personas">
+                    <option hidden selected>Personas</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -110,11 +115,11 @@
                     <option value="19">19</option>
                     <option value="20">20</option>
                 </select>
-
             </div>
 
-            <div class="buscar"> <!--enlace a pág. de resevas-->
-                <button type="submit" id="submit" class="buscar">Buscar ></button>
+            <div class="buscar"> <!-- Enlace a pág. de resevas -->
+                <button class="buscar">Buscar 
+                <i class="fas fa-chevron-right"></i></button>
             </div>
         
         </div>
@@ -122,7 +127,7 @@
     </div>
 
     <div id="slider">
-        <!--6 imagenes con animación lateral-->
+        <!-- 6 imágenes con animación lateral -->
     </div>
 
     <nav id="menu-info">
