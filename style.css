@@ -56,8 +56,14 @@ article .info{
     width: 50%;
     height: 800px;
 }
+.info img{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: -40;
+}
 
-.info .parrafo{
+.info .parrafo{/*vector de hacendado*/
     float: right;
     width: 52%;
     height: 50%;
@@ -93,7 +99,7 @@ article .menu-goiko{
     margin-top:     0%;
 
     font-family: 'Knockout';
-    font-size: 22px;
+    font-size: 50px;
     
 }
 
@@ -133,7 +139,7 @@ article .menu-goiko{
     padding-bottom: 0;
 }
 
-.area1 header{ /*title*/
+.conteinerbox .area1 header{ /*title*/
 
     line-height: 1.3;
     grid-area: title;
@@ -142,7 +148,7 @@ article .menu-goiko{
     color: #FFF;
 
     font-size: 22px;
-    padding: 10px;
+    padding-top: 10px;
     letter-spacing: -0.48px;
 
     font-family: 'Knockout', serif;
