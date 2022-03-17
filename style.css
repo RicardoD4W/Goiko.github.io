@@ -264,47 +264,46 @@ article .menu-goiko{
 
 .img-flex-blog{
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    background: url(//www.goiko.com/wp-content/themes/goiko2020/img/fondo-textura.jpg) repeat;
+    background-size: cover;
+    padding: 40px 20px 55px;
+    text-align: center;
 }
 
-.img-flex-blog img{
-    z-index: 99;
-    margin-right: 40px;
+.img-flex-blog ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
     margin-bottom: 0px;
 }
 
-.img-flex-blog .img-blog .pieFoto{
-    z-index: 100;
+.img-flex-blog ul li{
+    display: inline-block;
 
+    width: 325px;
+    height: 325px;
+    position: relative;
+    margin: 0 auto 15px auto;
+    background-size: cover;
+    margin-left: 40px;
+}
+
+.img-flex-blog ul li h3 {
     color: white;
-    /*background-color: rgba(0, 0, 0, 0.6);*/
-    float: inline-end;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 0;
-    margin-top: -15%;
-
+    text-decoration: none;
     padding: 20px 20px;
     font-size: 14px;
-
     font-weight: 600;
     text-align: left;
     font-family: "Nunito Sans", Arial, sans-serif;
-
+    margin: 0;
     text-transform: none;
-    line-height: 1;
-    clear: both;
-    overflow-wrap: break-word;
-
-    width: 325px;
 }
-
-.boton-blog{
-    margin-top: 5em;
-}
-
 
 
