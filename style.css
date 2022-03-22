@@ -307,3 +307,22 @@ article .menu-goiko{
 }
 
 
+
+.log_whats i{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    background-color: #46E863;
+    line-height: 80%;
+}
+
+.log_whats a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.log_whats a:hover{
+    text-decoration: none;
+    color: inherit;
+}
