@@ -3,6 +3,11 @@
     src: url(fonts\Knockout\HTF73-FullHeviweight\Regular.otf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /* PRIMER NAV */
 
 nav#menu-principal {
@@ -13,7 +18,6 @@ nav#menu-principal {
     left: 0px;
     right: 0px;
     color: #000;
-    font-weight: bolder;
     line-height: 1;
     font-size: 26px;
     font-family: 'Knockout HTF73-FullHeviweight', serif;
@@ -51,12 +55,12 @@ nav#menu-principal ul li .color-reservar a:hover {
 .menu-carta {
     padding: 0px 30px;
     margin-left: 10px;
-    margin-top: -50px;
+    margin-top: -25px;
 }
 
 .menu-menu {
     padding: 0px 30px;
-    margin-top: -50px;
+    margin-top: -25px;
 }
 
 .menu-icono {
@@ -66,47 +70,50 @@ nav#menu-principal ul li .color-reservar a:hover {
 
 .menu-reservar {
     padding: 0px 30px;
-    margin-top: -50px;
+    margin-top: -25px;
+    /*background-color: red;
+    color: white;*/
 }
+
+/*.menu-reservar:hover {background-color: #000; color: white;}*/
 
 .menu-hacer-pedido {
     padding: 0px 30px;
-    margin-top: -50px;
+    margin-top: -25px;
 }
 
 .menu-amigos {
     padding: 0px 30px;
-    margin-top: -50px;
+    margin-top: -25px;
 }
 
 .logo-goiko {
-    margin-top: -150px;
+    margin-top: -70px;
     height: 115px;
-    cursor: pointer;
     list-style: none;
 }
 
 /* SEGUNDO NAV */
 
 div#barra-reserva {
-    background-color: #000;
+    display: block;
     position: relative;
+    background-color: #000;
 }
 
 .contenedor-barrareserva {
     display: flex;
     margin-top: 155px;
     margin-left: 342px;
+    padding: 8px;
     align-items: center;
 }
 
 .reserva-ahora {
     display: block;
-    padding: 4px;
-    margin-top: 16px;
     font-family: Arial, sans-serif;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: #FFF;
     text-align: center;
 }
@@ -167,6 +174,46 @@ h2 {
 
 /* SLIDER ANIMADO */
 
+div#slider {
+    width: 100%;
+    height: 0%;
+    background-color: #000;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    padding-bottom: 40%;
+}
+
+.papalatas {
+    width: 1500px;
+    height: 755px;
+}
+
+.plantbased {
+    width: 1500px;
+    height: 755px;
+}
+
+.smoke {
+    width: 1500px;
+    height: 755px;
+}
+
+.guacachicken {
+    width: 1500px;
+    height: 755px;
+}
+
+.smash {
+    width: 1500px;
+    height: 755px;
+}
+
+.safeplace {
+    width: 1500px;
+    height: 755px;
+}
+
 /* TERCER NAV */
 
 nav#menu-info {
@@ -187,4 +234,71 @@ nav#menu-info li {
     font-family: 'Nunito Sans', Arial, sans-serif;
     text-align: center;
     letter-spacing: 0.2px;
+}
+
+/* PIE DE PÁGINA */
+
+div#pie {
+    clear: both;
+    overflow: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 22%;
+    background-color: #000;
+    color: #FFF;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contenedor-pie {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 25%;
+    background-color: #000;
+    color: #FFF;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contenedor-pie a:link, a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.contenedor-pie a:hover {
+    color: red;
+}
+
+.col1 {
+    padding-top: 3px;
+    padding-left: 2px;
+    float: left;
+    position: relative;
+    width: 10.5%;
+}
+
+.col2 {
+    padding-top: 3px;
+    margin-left: 70px;
+    float: left;
+    position: relative;
+    width: 14%;
+}
+
+.col3 {
+    padding-top: 3px;
+    padding-left: 10px;
+    margin-left: 40px;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 32%;
+}
+
+.col4 {
+    padding-top: 3px;
+    margin-left: 50px;
+    float: left;
+    position: relative;
+    width: 15%;
 }
