@@ -33,29 +33,15 @@ nav#menu-principal {
     text-align: center;
     position: absolute;
     top: 70px;
-    left: 0px;
     right: 0px;
+    left: 0px;
+    margin-left: 3.5%;
     line-height: 26px;
     font-size: 26px;
     font-family: 'Knockout HTF73-FullHeviweight', serif;
 }
 
-    nav#menu-principal a {
-        color: #000;
-        transition: color 0.3s;
-        text-decoration: none;
-    }
-
-    nav#menu-principal a:link, a:visited {
-        color: #000;
-        text-decoration: none;
-    }
-
-    nav#menu-principal a:hover {
-        color: #EE2737;
-    }
-
-.contenedor-menu-principal {
+.contenedor-menu-principal { 
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -65,7 +51,18 @@ nav#menu-principal {
 }
 
     .contenedor-menu-principal li a {
+        transition: color 0.3s;
+        text-decoration: none;
         color: #000;
+    }
+
+    .contenedor-menu-principal li a:link, a:visited {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .contenedor-menu-principal li a:hover {
+        color: #EE2737;
     }
 
 .menu-carta {
@@ -79,37 +76,40 @@ nav#menu-principal {
 }
 
     .color-reservar {
+        transition: color;
         background-color: #EE2737;
-        font-weight: bolder;
         padding: 12px;
-        color: white;
+        color: white !important;
     }
 
-    .color-reservar a:hover {
+    .color-reservar a:link {
         background-color: #000; 
         color: white;
     }
+  
 
 .menu-icono {
     padding: 0px 20px;
     margin-top: -2px;
 }
 
+    .logo-goiko {
+        margin-top: -70px;
+        height: 115px;
+        list-style: none;
+    }
+
 .menu-amigos {
     padding: 0px 30px;
     margin-top: -35px;
-}
-
-.logo-goiko {
-    margin-top: -70px;
-    height: 115px;
-    list-style: none;
+    line-height: -2;
 }
 
 /* SEGUNDO MENÚ DE NAVEGACIÓN */
 /*****************************/
 
 div#barra-reserva {
+    z-index: 999;
     position: sticky;
     display: block;
     top: 0px;
@@ -124,71 +124,188 @@ div#barra-reserva {
     justify-content: center;
 }
 
-.reserva-ahora {
-    display: block;
-    font-family: Arial, sans-serif;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 1;
-    text-align: center;
-    color: #FFF;
-}
+    .reserva-ahora {
+        display: block;
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1;
+        text-align: center;
+        color: #FFF;
+        margin-top: 8px;
+    }
 
-.input-direccion {
-    font-size: 15px;
-    width: 22em;
-    height: 2.3em;
-    margin: 0px 5px 0px 14px;
-    border-radius: 6px;
-}
+    .input-direccion {
+        font-size: 15px;
+        width: 22em;
+        height: 3em;
+        margin: 0px 5px 0px 14px;
+        border-radius: 6px;
+    }
 
-.input-fecha {
-    width: 12em;
-    height: 2.8em;
-    margin: 0px 5px 0px 5px;
-    border-radius: 6px;
-}
+    .input-fecha {
+        width: 12em;
+        height: 2.8em;
+        margin: 0px 5px 0px 5px;
+        border-radius: 6px;
+    }
 
-.select-hora {
-    width: 12em;
-    height: 3.1em;
-    margin: 0px 5px 0px 5px;
-    border-radius: 6px;
-    cursor: pointer;
-}
+    .select-hora {
+        width: 12em;
+        height: 2.7em;
+        margin: 0px 5px 0px 5px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
 
-.select-personas {
-    width: 12em;
-    height: 3.1em;
-    margin: 0px 20px 0px 5px;
-    border-radius: 6px;
-    cursor: pointer;
-}
+    .select-personas {
+        width: 12em;
+        height: 2.7em;
+        margin: 0px 20px 0px 5px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
 
-.buscar {
-    flex-grow: 0;
-    margin-top: 0px;
-    padding: 2px 5px 0px;
-    background-color: #000;
-    color: #FFF;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.33;
-    cursor: pointer;
-    border: 0;
-}
+    .buscar-ya {
+        flex-grow: 0;
+        margin: 0px 0px 2px 7px;
+        padding: 2px 5px 0px;
+        background-color: #000;
+        border: 0;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.33;
+    }
 
 /* SLIDER // CARRUSEL ANIMADO */
 /**************************/
 
 .carrusel {
-    display: flex;
-    width: 100%;
-    height: 500px;
+    position: relative;
     overflow: hidden;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: calc(435px + 18em);
 }
+
+    .carrusel-radio:checked + .contenedor-carrusel {
+        position: static;
+        opacity: 100;
+    }
+
+.contenedor-carrusel {
+    position: absolute;
+    opacity: 0;
+}
+
+    .contenedor-carrusel .papalatas {
+        width: 100%;
+        height: calc(435px + 18em);
+    }
+    .contenedor-carrusel .plantbased {
+        width: 100%;
+        height: calc(435px + 18em);
+    }
+    .contenedor-carrusel .smoke {
+        width: 100%;
+        height: calc(435px + 18em);
+    }
+    .contenedor-carrusel .guacachicken {
+        width: 100%;
+        height: calc(435px + 18em);
+    }
+    .contenedor-carrusel .smash {
+        width: 100%;
+        height: calc(435px + 18em);
+    }
+    .contenedor-carrusel .safeplace {
+        width: 100%;
+        height: calc(435px + 18em);
+    }
+
+.carrusel-flechas {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    text-align: center;
+    line-height: 29px;
+    font-size: 44px;
+    width: 40px;
+    height: 40px;
+    top: 55%;
+    margin-top: 7%;
+    z-index: 10;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+    .carrusel-flechas.prev {
+        left: 3%;
+    }
+
+    .carrusel-flechas.next {
+        right: 3%;
+    }
+
+    .carrusel-flechas:hover {
+        background: rgba(0, 0, 0, 0.8);
+        color: #aaaaaa;
+    }
+
+    #slide-1:checked ~ .control-1,
+    #slide-2:checked ~ .control-2,
+    #slide-3:checked ~ .control-3,
+    #slide-4:checked ~ .control-4,
+    #slide-5:checked ~ .control-5,
+    #slide-6:checked ~ .control-6 {
+        display: block;
+    }
+
+.carrusel-circulos {
+    position: absolute;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: 610px;
+    right: 0;
+    bottom: 2%;
+    left: 25px;
+    z-index: 10;
+}
+
+    .carrusel-circulos li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .slide-circulo {
+        color: #828282;
+        cursor: pointer;
+        display: block;
+        font-size: 50px;
+    }
+
+    .slide-circulo:hover {
+        color: #aaaaaa;
+    }
+
+    #slide-1:checked ~ .control-1 ~ .carrusel-circulos li:nth-child(1) .slide-circulo,
+    #slide-2:checked ~ .control-2 ~ .carrusel-circulos li:nth-child(2) .slide-circulo,
+    #slide-3:checked ~ .control-3 ~ .carrusel-circulos li:nth-child(3) .slide-circulo,
+    #slide-4:checked ~ .control-4 ~ .carrusel-circulos li:nth-child(4) .slide-circulo,
+    #slide-5:checked ~ .control-5 ~ .carrusel-circulos li:nth-child(5) .slide-circulo,
+    #slide-6:checked ~ .control-6 ~ .carrusel-circulos li:nth-child(6) .slide-circulo {
+        color: #428bca;
+    }
+
+    .control-6, .control-5, .control-4, .control-3, .control-1, .control-2 {
+        margin-top: -.5em;
+    }
 
 /* TERCER MENÚ DE NAVEGACIÓN */
 /****************************/
@@ -201,16 +318,10 @@ nav#menu-info {
 
     nav#menu-info li {
         padding: 0px 20px;
-        color: #000;
         font-size: 18px;
         font-family: 'Nunito Sans', Arial, sans-serif;
         text-align: center;
         letter-spacing: 0.2px;
-    }
-
-    nav#menu-info li a:link, a:visited {
-        color: #000;
-        text-decoration: none;
     }
 
 .menu-info-listas {
@@ -224,6 +335,11 @@ nav#menu-info {
 
     .menu-info-listas li a {
         color: #000;
+    }
+
+    .menu-info-listas li a:link, a:visited {
+        color: #000;
+        text-decoration: none;
     }
 
 /* PIE DE PÁGINA */
@@ -242,9 +358,8 @@ div#pie {
 .gotas-pie {
     display: block;
     border: 0;
-    height: 35px;
-    background: url(https://www.goiko.com/wp-content/themes/goiko2020/img/gotas-footer.svg) no-repeat;
-    margin: 50px 20% 30px 21.2%;
+    height: 40px;
+    margin: 50px 20% 30px 19.9%;
     padding: 0px 25px 0px 25px;
 }
 
@@ -300,6 +415,7 @@ div#pie {
         height: 100%;
         padding-right: 15px;
         padding-left: 15px;
+        list-style: none;
         justify-self: center;
     }
 
@@ -307,6 +423,10 @@ div#pie {
     grid-row: 2 / 3;
     grid-column: 3 / 4;
     margin: auto auto 0px auto;
+}
+
+.col4 a:hover {
+    color: #FFF;
 }
 
     .boton-encuentra {
@@ -330,4 +450,343 @@ div#pie {
     font-size: 12px;
     margin: 90px 0px 0px 10px;
     color: #FFF;
+}
+
+/*#########################################################################*/
+/*#########################################################################*/
+/*#########################################################################*/
+/*#####################estilos ricardo######################################*/
+/*#########################################################################*/
+/*#########################################################################*/
+@font-face {
+    font-family: Knockout;
+    src: url(Knockout\ HTF73-FullHeviweight\ Regular.otf);
+}
+
+
+
+#principal{
+float: left;
+
+    background-color: #ECECED;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 3em;
+}
+
+#principal a{
+    font-size: 18px;
+    font-family: 'Nunito Sans', sans-serif;
+
+    text-decoration: none;
+    color: black;
+    height: 40%;
+}
+
+
+#principal .noEnrrollar{
+    flex-wrap: nowrap;
+}
+
+#principal .alinear{
+    display: flex;
+    justify-content: space-between;
+    margin-left:  20%;
+    margin-right: 20%;
+    margin-top: 0.5% ;
+
+}
+
+
+
+
+
+
+article .info{
+    margin-left: 0%;
+    margin-right: 0%;
+    align-items: center;
+
+    float: left;
+}
+
+.info{
+    width: 100%;
+    height: 800px;
+}
+
+
+
+
+
+
+
+
+article .menu-goiko{
+    float: left;
+
+    width: 100%;
+    height: 50%;
+    background: url(//www.goiko.com/wp-content/themes/goiko2020/img/fondo-textura.jpg) repeat;
+    background-size: cover;
+    padding: 45px 22px 70px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.menu-goiko .conten h2{
+    float: left;
+    clear: both;
+
+    width: 100%;
+    height: 80%;
+    margin-left:    0%;
+    margin-right:   0%;
+    margin-top:     0%;
+
+    font-family: 'Knockout';
+    font-size: 50px;
+    
+}
+
+.menu-goiko .conten p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+}
+
+.conteinerbox{ /*contiene*/
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+
+    position: relative;
+    padding-bottom: 20px;
+    opacity: 1;
+
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.conten .area1 { /*grid area*/
+    width: 48%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "title title"
+        "main side";
+    padding-bottom: 0;
+}
+
+.conteinerbox .area1 header{ /*title*/
+
+    line-height: 1.3;
+    grid-area: title;
+
+    background-color: #EE2737;
+    color: #FFF;
+
+    font-size: 22px;
+    padding-top: 10px;
+    letter-spacing: -0.48px;
+
+    font-family: 'Knockout', serif;
+    text-transform: uppercase;
+    clear: both;
+    overflow-wrap: break-word;
+    display: block;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+
+    .area1 + .area1 header{ /*title*/
+        background-color: black;
+        }
+
+.area1 aside{
+    padding: 30px;
+    grid-area: main;
+    background-color: #FFF;
+
+}
+.area1 article img{
+    grid-area: side;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+.conten button{ /*boton mas responsive del mundo*/
+    align-items: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    margin: auto;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+
+
+
+
+
+/*conoce nuestra carta*/
+.conoce-carta{
+    text-align: center;
+}
+.conoce-carta h2{
+    margin: 15px auto 20px auto;
+    line-height: 1.14;
+    letter-spacing: -0.56px;
+
+    font-family: 'Knockout', serif;
+    font-size: 40PX;
+}
+
+
+.fotos{
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+.fotos .img{
+    position: relative;
+    width: 100%;
+}
+
+.fotos .img:nth-child(4n+1){
+    width: 55%;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+.fotos .img:nth-child(4n+2){
+    width: 45%;
+}
+.fotos .img:nth-child(4n+3) {
+    width: 45%;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+.fotos .img:nth-child(4n+4){
+    width: 55%;
+}
+
+.fotos .img .imgCaption {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px 10px;
+}
+
+
+
+
+/*BLOG*/
+.goiko-blog{
+    padding: 100px 20px 90px;
+    background: url(//www.goiko.com/wp-content/themes/goiko2020/img/fondo-textura.jpg) repeat;
+    background-size: cover;
+    padding: 40px 20px 55px;
+    text-align: center;
+}
+
+.goiko-blog .titulo-principal{
+   
+    margin-bottom: 80px;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Knockout', serif;
+}
+
+.img-flex-blog{
+
+    background: url(//www.goiko.com/wp-content/themes/goiko2020/img/fondo-textura.jpg) repeat;    
+    background-size: cover;
+    
+    padding: 40px 20px 55px;
+    text-align: center;
+}
+
+.img-flex-blog ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.img-flex-blog ul li{
+    display: inline-block;
+
+    width: 325px;
+    height: 325px;
+    position: relative;
+    margin: 0 auto 15px auto;
+    background-size: cover;
+    margin-left: 40px;
+}
+
+.img-flex-blog ul li h3 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    margin: 0;
+    text-transform: none;
+}
+
+
+
+.log_whats i{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    background-color: #46E863;
+    /*background-size: 70%;*/
+    line-height: 70%;
+    
+
+}
+
+.log_whats a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.log_whats a:hover{
+    text-decoration: none;
+    color: inherit;
 }

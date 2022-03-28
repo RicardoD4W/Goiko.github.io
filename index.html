@@ -1,249 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <script src="main.js"></script>
+    <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Hojas de Estilo -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome (para los botones de las redes sociales) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="style.css">
-    <title>PROYECTO GOIKO (Asier)</title>
+    <title>GOIKO - Chorreo y burgers por siempre</title>
 </head>
-
 <body>
+<div id="all">
 
-    <div id="todo">
+    <!-- NAVEGADOR DE IDIOMA -->
 
-        <!-- NAVEGADOR DE IDIOMA -->
-
-        <nav id="idioma">
+    <nav id="idioma">
             
-            <a href="#"><strong class="eleccion-idioma">ES</strong></a>
-            <a href="https://www.goiko.com/en/"><strong class="eleccion-idioma">EN</strong></a>
-            <a href="https://www.goiko.com/ca/"><strong class="eleccion-idioma">CA</strong></a>
+        <a href="#"><strong class="eleccion-idioma">ES</strong></a>
+        <a href="https://www.goiko.com/en/"><strong class="eleccion-idioma">EN</strong></a>
+        <a href="https://www.goiko.com/ca/"><strong class="eleccion-idioma">CA</strong></a>
 
-        </nav>
+    </nav>
 
-        <!-- PRIMER MENÚ DE NAVEGACIÓN -->
+    <!-- PRIMER MENÚ DE NAVEGACIÓN -->
 
-        <nav id="menu-principal">
+    <nav id="menu-principal">
 
-            <ul class="contenedor-menu-principal">
+        <ul class="contenedor-menu-principal">
 
-                <li class="menu-carta">
-                    <a href="https://www.goiko.com/carta/">CARTA</a>
-                </li>
+            <li class="menu-carta">
+                <a href="https://www.goiko.com/carta/">CARTA</a>
+            </li>
 
-                <li class="menu-menu">
-                    <a href="https://www.goiko.com/menu-del-dia/">MENÚ GOIKO</a>
-                </li>
+            <li class="menu-menu">
+                <a href="https://www.goiko.com/menu-del-dia/">MENÚ GOIKO</a>
+            </li>
 
-                <li class="menu-icono">
-                    <a href="#"><img class="logo-goiko" src="images\LogoGoikoOriginal.PNG"></a>
-                </li>
+            <li class="menu-icono">
+                <a href="#"><img class="logo-goiko" src="images\LogoGoikoOriginal.PNG"></a>
+            </li>
 
-                <li class="menu-reservar">
-                    <a class="color-reservar" href="https://www.goiko.com/reservas/">RESERVAR</a>
-                </li>
+            <li class="menu-reservar">
+                <a class="color-reservar" href="https://www.goiko.com/reservas/">RESERVAR</a>
+            </li>
 
-                <li class="menu-hacer-pedido">
-                    <a href="https://www.goiko.com/hacer-pedido/">HACER PEDIDO</a>
-                </li>
+            <li class="menu-hacer-pedido">
+                <a href="https://www.goiko.com/hacer-pedido/">HACER PEDIDO</a>
+            </li>
 
-                <li class="menu-amigos">
-                    <a href="https://www.goikofriends.com/">
-                        <p>FRIENDS</p>
-                        <p>WITH BENEFITS</p>
-                    </a>
-                </li>
+            <li class="menu-amigos">
+                <a href="https://www.goikofriends.com/">
+                    <p>FRIENDS <br>
+                    WITH BENEFITS</p>
+                </a>
+            </li>
 
-            </ul>
+        </ul>
 
-        </nav>
+    </nav>
 
-        <!-- SEGUNDO MENÚ DE NAVEGACIÓN -->
+    <!-- SEGUNDO MENÚ DE NAVEGACIÓN -->
 
-        <div id="barra-reserva">
+    <div id="barra-reserva">
 
-            <div class="contenedor-barrareserva">
+        <div class="contenedor-barrareserva">
 
-                <h2 class="reserva-ahora">¡Reserva ahora!</h2>
+            <h2 class="reserva-ahora">¡Reserva ahora!</h2>
 
-                <div class="direccion">
-                    <input type="text" name="direccion" placeholder="Dirección" class="input-direccion">
-                </div>
-
-                <div class="fecha">
-                    <input type="date" id="locator_date" placeholder="Fecha" autocomplete="off" class="input-fecha">
-                </div>
-
-                <div class="hora">
-                    <select name="horario" id="num-horario" class="select-hora">
-                        <option hidden selected>Hora</option>
-                        <option value="12:00">12:00</option>
-                        <option value="12:30">12:30</option>
-                        <option value="13:00">13:00</option>
-                        <option value="13:30">13:30</option>
-                        <option value="14:00">14:00</option>
-                        <option value="14:30">14:30</option>
-                        <option value="15:00">15:00</option>
-                        <option value="15:30">15:30</option>
-                        <option value="16:00">16:00</option>
-                        <option value="16:30">16:30</option>
-                        <option value="17:00">17:00</option>
-                        <option value="17:30">17:30</option>
-                        <option value="18:00">18:00</option>
-                        <option value="18:30">18:30</option>
-                        <option value="19:00">19:00</option>
-                        <option value="19:30">19:30</option>
-                        <option value="20:00">20:00</option>
-                        <option value="20:30">20:30</option>
-                        <option value="21:00">21:00</option>
-                        <option value="21:30">21:30</option>
-                        <option value="22:00">22:00</option>
-                        <option value="22:30">22:30</option>
-                        <option value="23:00">23:00</option>
-                        <option value="23:30">23:30</option>
-                    </select>
-                </div>
-
-                <div class="personas">
-                    <select name="personas" id="num-personas" class="select-personas">
-                        <option hidden selected>Personas</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                    </select>
-                </div>
-
-                <div class="buscar">
-                    <!-- Enlace a pág. de reservas -->
-                    <button class="buscar">Buscar
-                        <i class="fas fa-chevron-right"></i></button>
-                </div>
-
+            <div class="direccion">
+                <input type="text" name="direccion" placeholder=" Dirección" class="input-direccion">
             </div>
 
-        </div>
-
-       <!--SLIDER // CARRUSEL ANIMADO -->
-            
-            <div id="slider"> </div>
-
-            <div class="carrusel">
-                <img src="images\Papalatas.jpg" class="papalatas">
-                <img src="images\Plantbased.jpg" class="plantbased">
-                <img src="images\Smoke.jpg" class="smoke">
-                <img src="images\Guacachicken.jpg" class="guacachicken">
-                <img src="images\Smash.jpg" class="smash">
-                <img src="images\Safeplace.jpg" class="safeplace">
+            <div class="fecha">
+                <input type="date" id="locator_date" placeholder=" Fecha" autocomplete="off" class="input-fecha">
             </div>
 
-        <!-- TERCER MENÚ DE NAVEGACIÓN -->
+            <div class="hora">
+                <select name="horario" id="num-horario" class="select-hora">
+                    <option hidden selected>Hora</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                    <option value="23:00">23:00</option>
+                    <option value="23:30">23:30</option>
+                </select>
+            </div>
 
-        <nav id="menu-info">
+            <div class="personas">
+                <select name="personas" id="num-personas" class="select-personas">
+                    <option hidden selected>Personas</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
 
-            <ul class="menu-info-listas">
-
-                <li class="conocenos">
-                    <a href="https://www.goiko.com/carta/">CONÓCENOS</a>
-                </li>
-
-                <li class="giftcards">
-                    <a href="https://www.goiko.com/menu-del-dia/">GIFT CARDS</a>
-                </li>
-
-                <li class="blog">
-                    <a href="https://www.goiko.com/reservas/">BLOG</a>
-                </li>
-
-                <li class="contacto">
-                    <a href="https://www.goiko.com/hacer-pedido/">CONTACTO</a>
-                </li>
-
-                <li class="unete-equipo">
-                    <a href="https://www.goikofriends.com/">ÚNETE AL EQUIPO</a>
-                </li>
-
-                <li class="rsc">
-                    <a href="https://www.goikofriends.com/">RSC</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-        <!-- PIE DE PÁGINA -->
-
-        <div id="pie">
-
-            <hr class="gotas-pie" src="images\GotasPie.PNG">
-
-            <div class="contenedor-pie">
-
-                <div class="col1">
-                    <a href="https://www.goiko.com/carta/">Carta</a> <br><br>
-                    <a href="https://www.goiko.com/menu-del-dia/">Menú Goiko</a> <br><br>
-                    <a href="https://www.goiko.com/reservas/">RESERVAS</a> <br><br>
-                    <a href="https://www.goiko.com/unete-al-equipo/">Únete al equipo</a> <br><br>
-                    <a href="https://www.goiko.com/contacto/">Contacto</a> <br><br>
-                    <a href="https://www.goiko.com/blog/">Blog</a> <br><br>
-                    <a href="https://www.goiko.com/alergenos/">Alérgenos</a> <br><br>
-                    <a href="https://www.goiko.com/prensa/">Prensa</a> <br><br>
-                    <a href="https://www.goiko.com/business-contact/">Business Contact</a> <br><br>
-                    <a href="https://www.goiko.com/pide-tu-factura/">Solicita tu factura online</a> <br><br>
-                    <a href="https://www.goiko.com/politica_de_proteccion_de_datos/">Política de Protección de Datos</a> <br><br>
-                    <a href="https://www.goiko.com/aviso_legal/">Aviso Legal</a> <br><br>
-                    <a href="https://www.goiko.com/bases-condiciones/">Bases y condiciones</a> <br><br>
-                    <a href="https://www.goiko.com/politica_de_cookies/">Política de Cookies</a> <br><br>
-                    <a href="https://www.goiko.com/informe-nf-2020/">Informe No Financiero 2020</a>
-                </div>
-
-                <p class="col2">
-                    <a href="#"><img class="logo-goiko-negro" src="images\LogoGoikoNegro.PNG"></a>
-                </p>
-
-                <div class="col4">
-                    <a class="boton-encuentra" href="https://www.goiko.com/reservas/">ENCUENTRA TU GOIKO</a>
-                </div>
-
-                <div class="col5">
-                    <p>© 2022 GOIKO GRILL GROUP S.L. - Todos los derechos reservados</p>
-                </div>
-
-                <ul class="col3">
-                    <!-- Enlaces a págs. de redes sociales -->
-                    <li class="boton-redsocial"><a href="https://www.instagram.com/goiko/"><i class="fab fa-instagram fa-3x"></i></a></li>
-                    <li class="boton-redsocial"><a href="https://twitter.com/goiko"><i class="fab fa-twitter fa-3x"></i></a></li>
-                    <li class="boton-redsocial"><a href="https://www.facebook.com/goiko"><i class="fab fa-facebook fa-3x"></i></a></li>
-                    <li class="boton-redsocial"><a href="https://www.linkedin.com/company/goiko-burgers/"><i class="fab fa-linkedin fa-3x"></i></a></li>
-                </div>
-
+            <div class="buscar">
+                <!-- Botón con enlace a pág. de reservas -->
+                <a href="https://www.goiko.com/reservas/"><button class="buscar-ya">Buscar
+                    <i class="fas fa-chevron-right"></i></button></a>
             </div>
 
         </div>
 
     </div>
-</body>
 
+   <!-- SLIDER // CARRUSEL ANIMADO -->
+        
+        <div id="slider">
+
+            <div class="carrusel">
+
+                <!-- Contenido del carrusel con las imágenes asignadas -->
+                <input class="carrusel-radio" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+
+                    <div class="contenedor-carrusel">
+                        <img src="images\Papalatas.jpg" class="papalatas">
+                    </div>
+
+                <input class="carrusel-radio" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+
+                    <div class="contenedor-carrusel">
+                        <img src="images\Plantbased.jpg" class="plantbased">
+                    </div>
+
+                <input class="carrusel-radio" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+
+                    <div class="contenedor-carrusel">
+                        <img src="images\Smoke.jpg" class="smoke">
+                    </div>
+
+                <input class="carrusel-radio" type="radio" id="slide-4" name="slide" aria-hidden="true" hidden="">
+
+                    <div class="contenedor-carrusel">
+                        <img src="images\Guacachicken.jpg" class="guacachicken">
+                    </div>
+
+                <input class="carrusel-radio" type="radio" id="slide-5" name="slide" aria-hidden="true" hidden="">
+
+                    <div class="contenedor-carrusel">
+                        <img src="images\Smash.jpg" class="smash">
+                    </div>
+
+                <input class="carrusel-radio" type="radio" id="slide-6" name="slide" aria-hidden="true" hidden="">
+
+                    <div class="contenedor-carrusel">
+                        <img src="images\Safeplace.jpg" class="safeplace">
+                    </div>
+
+                <!-- Flechas para controlar la navegación en los laterales -->
+                <label for="slide-6" class="carrusel-flechas prev control-1">‹</label>
+                <label for="slide-2" class="carrusel-flechas next control-1">›</label>
+
+                <label for="slide-1" class="carrusel-flechas prev control-2">‹</label>
+                <label for="slide-3" class="carrusel-flechas next control-2">›</label>
+                
+                <label for="slide-2" class="carrusel-flechas prev control-3">‹</label>
+                <label for="slide-4" class="carrusel-flechas next control-3">›</label>
+
+                <label for="slide-3" class="carrusel-flechas prev control-4">‹</label>
+                <label for="slide-5" class="carrusel-flechas next control-4">›</label>
+
+                <label for="slide-4" class="carrusel-flechas prev control-5">‹</label>
+                <label for="slide-6" class="carrusel-flechas next control-5">›</label>
+
+                <label for="slide-5" class="carrusel-flechas prev control-6">‹</label>
+                <label for="slide-1" class="carrusel-flechas next control-6">›</label>
+
+                <!-- Círculos para controlar la navegación en los laterales -->
+                <ol class="carrusel-circulos">
+
+                    <li><label for="slide-1" class="slide-circulo">•</label></li>
+
+                    <li><label for="slide-2" class="slide-circulo">•</label></li>
+
+                    <li><label for="slide-3" class="slide-circulo">•</label></li>
+
+                    <li><label for="slide-4" class="slide-circulo">•</label></li>
+
+                    <li><label for="slide-5" class="slide-circulo">•</label></li>
+
+                    <li><label for="slide-6" class="slide-circulo">•</label></li>
+                    
+                </ol>
+
+            </div>
+
+        </div>
+
+    <!-- TERCER MENÚ DE NAVEGACIÓN -->
+    
+    <nav id="menu-info">
+
+        <ul class="menu-info-listas">
+
+            <li class="conocenos">
+                <a href="https://www.goiko.com/conocenos/nuestra-historia/">CONÓCENOS</a>
+            </li>
+
+            <li class="giftcards">
+                <a href="https://www.goiko.com/giftcard/">GIFT CARDS</a>
+            </li>
+
+            <li class="blog">
+                <a href="https://www.goiko.com/blog/">BLOG</a>
+            </li>
+
+            <li class="contacto">
+                <a href="https://www.goiko.com/contacto/">CONTACTO</a>
+            </li>
+
+            <li class="unete-equipo">
+                <a href="https://www.goiko.com/unete-al-equipo/">ÚNETE AL EQUIPO</a>
+            </li>
+
+            <li class="rsc">
+                <a href="https://www.goiko.com/rsc/">RSC</a>
+            </li>
+
+        </ul>
+
+        <!-- ******************************************************************************************************************************* -->
+
+    </nav>
+
+        <article>
+            <div class="info">
+                    <div class="d-flex justify-content-center">
+                        <img src="goiko.principal.PNG" alt="">
+                    </div>
+            </div>
+        </article>
+
+        <article>
+            <div class="menu-goiko">
+                <div class="conten">
+                    <center>
+                        <h2> MENÚ GOIKO</h2> <br>
+                        <p><strong>De lunes a viernes de 12:00 h. a 17:00 h. (excepto festivos). Disponible únicamente en sala.
+                        </strong>
+                        </p>
+                     </center>
+                     <br>
+
+                <div class="conteinerbox">
+                    <div class="area1">
+                        <header>
+                            <h2 style="text-align: center; font-size: 22px;">EL DE SIEMPRE</h2>
+                        </header>
+
+                        <aside style="font-family: 'Nunito Sans', sans-serif;">
+                            <p>El lunes 28, la hamburguesa del dia será:</p>
+                            <h3 style="font-family: 'Knockout', serif;">HAMBURGUESA LA CREAMY CRUNCH</h3>
+                            <p> 
+                                <small>
+                                Incluye bebida+burger del día de
+                            <strong>190g</strong>
+                            (con patatas) o bowl+postre de menú o café
+                                </small> 
+                            </p>
+                            <p><strong>
+                                Solo por 12,90€
+                                </strong>
+                            </p>
+                        </aside>
+
+                        <article>
+                            <img width="430" height="300"   src="https://www.goiko.com/wp-content/uploads/2017/01/BCD_1331-1-430x300.jpg" alt="">
+                        </article>
+                    </div>
+
+                    <div class="area1">
+                        <header>
+                            <h2 style=" text-align: center;font-size: 22px;"> <span>
+                                el básico</span></h2>
+                               
+                        </header>
+
+                        <aside style="font-family: 'Nunito Sans', sans-serif;">
+                            <p>El lunes 28, la hamburguesa del dia será:</p>
+                            <h3 style="font-family: 'Knockout', serif;">HAMBURGUESA OH! MY BACON</h3>
+                            <p>
+                                <small>
+                                Incluye bebida+burger del día de <strong>100g</strong> (con patatas)+postre o café.</p>
+                                </small>
+                                <p>
+                                    <strong>
+                                    Solo por 11,60€
+                                    </strong>
+                                </p>
+                        </aside>
+
+                        <article>
+                            <img width="250" height="249"  src="https://www.goiko.com/wp-content/uploads/2021/12/OHMYBACON_1200x600-430x300.jpg" alt="">
+                        </article>
+                    </div>
+                </div>
+                <center>
+                    <a href="" class="btn"></a>
+                        <button type="button" class="btn btn-outline-danger">
+                            <div class="text-nowrap" style="width: 6rem;"> VER MÁS
+                             <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </button>
+                    </a>
+                </center>
+                    </div>
+
+            </div>
+        </article>
+
+        <article>
+                <div class="conoce-carta">
+                    <h2>CONOCE
+                        <br>
+                        NUESTRA CARTA
+                    </h2>
+                    <center>
+                        <a href="" class="btn"></a>
+                            <button type="button" class="btn btn-outline-danger">
+                                <div class="text-nowrap" style="width: auto;">
+                                    VER TODOS LOS PLATOS
+                                 <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </button>
+                        </a>
+                    </center>
+                </div>
+        </article>
+
+        <article>
+            <div class="fotos">
+                <div class="img">
+                    <img width="100%" height="752" src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_Yankee-1.jpg"
+                    class="attachment-full size-full lazy-image loaded" alt="" data-src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_Yankee-1.jpg"
+                    data-sizes="(max-width: 1800px) 100vw, 1800px" sizes="(max-width: 1800px) 100vw, 1800px">
+                    <div class="imgCaption">Yankee</div>
+                </div>
+
+                    <div class="img">
+                        <img width="99%" height="752" src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_KevinHuevo.jpg"
+                        class="attachment-full size-full lazy-image loaded" alt="" data-src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_KevinHuevo.jpg"
+                        data-sizes="(max-width: 1800px) 100vw, 1800px" sizes="(max-width: 1800px) 100vw, 1800px">
+                        <div class="imgCaption">Kevin Bacon con huevo</div>
+                    </div>
+
+                <div class="img">
+                    <img width="100%" height="752" src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome._BombaSexy.jpg"
+                    class="attachment-full size-full lazy-image loaded" alt="" data-src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome._BombaSexy.jpg"
+                    data-sizes="(max-width: 1800px) 100vw, 1800px" sizes="(max-width: 1800px) 100vw, 1800px">
+                    <div class="imgCaption">Bomba Sexy</div>
+                </div>
+
+
+                <div class="img">
+                    <img width="99%" height="752" src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_Mesa.jpg"
+                    class="attachment-full size-full lazy-image loaded" alt="" data-src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_Mesa.jpg"
+                    data-sizes="(max-width: 1800px) 100vw, 1800px" sizes="(max-width: 1800px) 100vw, 1800px">
+                </div>
+
+                <div class="img">
+                    <img width="100%" height="752" src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_Chipotle.jpg"
+                    class="attachment-full size-full lazy-image loaded" alt="" data-src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_Chipotle.jpg"
+                    data-sizes="(max-width: 1800px) 100vw, 1800px" sizes="(max-width: 1800px) 100vw, 1800px">
+                    <div class="imgCaption">Chipotle</div>
+                </div>
+
+                <div class="img">
+                    <img width="99%" height="752" src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_Pigma.jpg"
+                    class="attachment-full size-full lazy-image loaded" alt="" data-src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_Pigma.jpg"
+                    data-sizes="(max-width: 1800px) 100vw, 1800px" sizes="(max-width: 1800px) 100vw, 1800px">
+                    <div class="imgCaption">Pigma</div>
+                </div>
+
+                <div class="img">
+                    <img width="100%" height="752" src="https://www.goiko.com/wp-content/uploads/2021/05/Nachos_20.jpg"
+                    class="attachment-full size-full lazy-image loaded" alt="" data-src="https://www.goiko.com/wp-content/uploads/2021/05/Nachos_20.jpg"
+                    data-sizes="(max-width: 1800px) 100vw, 1800px" sizes="(max-width: 1800px) 100vw, 1800px">
+                    <div class="imgCaption">Nachorreo</div>
+                </div>
+
+                <div class="img">
+                    <img width="99%" height="752" src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_KevinBacon.jpg"
+                    class="attachment-full size-full lazy-image loaded" alt="" data-src="https://www.goiko.com/wp-content/uploads/2019/11/GaleriaHome_KevinBacon.jpg"
+                    data-sizes="(max-width: 1300px) 100vw, 1300px" sizes="(max-width: 1300px) 100vw, 1300px">
+                    <div class="imgCaption">Kevin Bacon</div>
+                </div>
+
+            </div><!--cierra fotos-->
+        </article>
+
+
+    <div id="secundario">
+        <div class="goiko-blog">
+            <div class="titulo-principal">
+                <h2 style=" font-size: 65px;">GOIKO BLOG</h2>
+            </div>
+
+        <article>
+            <div class="img-flex-blog">
+                
+                <ul>
+                    <li style="background-image: url('https://www.goiko.com/wp-content/uploads/2022/03/Ficha-de-producto_Ucrania-340x340.jpg')"> 
+                        <a href="https://www.goiko.com/goiko-ayudamos-a-ayudar/"></a>
+                        <h3>GOIKO envía toneladas de alimento a la frontera...</h3>
+                    </li>
+                    
+                    <li style="background-image: url('https://www.goiko.com/wp-content/uploads/2021/06/EncuestaSatisfacciónDelivery-340x340.jpg')"> 
+                        <a href="https://www.goiko.com/goiko-calienta-a-sus-clientes-con-su-programa-de-loyalty/"></a> 
+                        <h3>GOIKO calienta a sus clientes con su programa...</h3> 
+                    </li> 
+                    
+                    <li style="background-image: url('https://www.goiko.com/wp-content/uploads/2021/07/Captura-de-pantalla-2021-07-08-a-las-9.59.01-340x298.png')"> 
+                        <a href="https://www.goiko.com/goiko-aterriza-en-fortnite-con-un-mapa-que-da-mucha-hambre/"></a> 
+                        <h3>GOIKO funda su propia isla en Fortnite</h3> 
+                    </li> 
+                </ul>
+
+            </div>
+        </article>
+
+                <div class="boton-blog">
+                    <center>
+                        <a href="" class="btn"></a>
+                            <button type="button" class="btn btn-outline-danger">
+                                <div class="text-nowrap" style="width: 12rem;"> VER OTRAS ENTRADAS 
+                                <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </button>
+                        </a>
+                    </center>
+                </div>
+        </div>
+    </div>
+
+        <footer>
+            
+        </footer>
+    </div>
+    
+    <div class="log_whats">
+        <a target="_blank" href="https://api.whatsapp.com/send/?phone=34602220309&text&app_absent=0">
+            <i class="fab fa-whatsapp-square fa-3x"></i>
+        </a>
+    </div>
+
+    <!-- ******************************************************************************************************************************* -->
+
+    <!-- PIE DE PÁGINA -->
+
+    <div id="pie">
+
+        <img class="gotas-pie" src="images\GotasPie.PNG">
+
+        <div class="contenedor-pie">
+
+            <div class="col1">
+                <a href="https://www.goiko.com/carta/">Carta</a> <br><br>
+                <a href="https://www.goiko.com/menu-del-dia/">Menú Goiko</a> <br><br>
+                <a href="https://www.goiko.com/reservas/">RESERVAS</a> <br><br>
+                <a href="https://www.goiko.com/unete-al-equipo/">Únete al equipo</a> <br><br>
+                <a href="https://www.goiko.com/contacto/">Contacto</a> <br><br>
+                <a href="https://www.goiko.com/blog/">Blog</a> <br><br>
+                <a href="https://www.goiko.com/alergenos/">Alérgenos</a> <br><br>
+                <a href="https://www.goiko.com/prensa/">Prensa</a> <br><br>
+                <a href="https://www.goiko.com/business-contact/">Business Contact</a> <br><br>
+                <a href="https://www.goiko.com/pide-tu-factura/">Solicita tu factura online</a> <br><br>
+                <a href="https://www.goiko.com/politica_de_proteccion_de_datos/">Política de Protección de Datos</a> <br><br>
+                <a href="https://www.goiko.com/aviso_legal/">Aviso Legal</a> <br><br>
+                <a href="https://www.goiko.com/bases-condiciones/">Bases y condiciones</a> <br><br>
+                <a href="https://www.goiko.com/politica_de_cookies/">Política de Cookies</a> <br><br>
+                <a href="https://www.goiko.com/informe-nf-2020/">Informe No Financiero 2020</a>
+            </div>
+
+            <p class="col2">
+                <a href="#"><img class="logo-goiko-negro" src="images\LogoGoikoNegro.PNG"></a>
+            </p>
+            <div class="col4">
+                <a class="boton-encuentra" href="https://www.goiko.com/reservas/">ENCUENTRA TU GOIKO</a>
+            </div>
+            <div class="col5">
+                <p>© 2022 GOIKO GRILL GROUP S.L. - Todos los derechos reservados</p>
+            </div>
+            <ul class="col3">
+                <!-- Enlaces a págs. de redes sociales -->
+                <li class="boton-redsocial"><a href="https://www.instagram.com/goiko/"><i class="fab fa-instagram fa-3x"></i></a></li>
+                <li class="boton-redsocial"><a href="https://twitter.com/goiko"><i class="fab fa-twitter fa-3x"></i></a></li>
+                <li class="boton-redsocial"><a href="https://www.facebook.com/goiko"><i class="fab fa-facebook fa-3x"></i></a></li>
+                <li class="boton-redsocial"><a href="https://www.linkedin.com/company/goiko-burgers/"><i class="fab fa-linkedin fa-3x"></i></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
 </html>
